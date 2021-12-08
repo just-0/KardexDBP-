@@ -20,8 +20,6 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
     public FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
