@@ -7,53 +7,81 @@
     android:onClick="CambiarActivity"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/bt_crear"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:onClick="Firebase_crear"
-        android:text="Crear"
-        android:textSize="20sp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/bt_borrar"
+        <Button
+            android:id="@+id/CrearCollectionbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/Azul_verde"
+            android:onClick="CambiarActivity"
+            android:text="Crear Coleccion"
+            android:textSize="20sp"
+            app:cornerRadius="10dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/bt_borrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/Azul_verde"
+            android:onClick="borrar"
+            android:text="Borrar"
+            android:textSize="20sp"
+            app:cornerRadius="10dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/bt_crear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/Azul_verde"
+            android:onClick="Firebase_crear"
+            android:text="Crear"
+            android:textSize="20sp"
+            app:cornerRadius="10dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/bt_actualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/Azul_verde"
+            android:onClick="actualizar"
+            android:text="Actualizar"
+            android:textSize="20sp"
+            app:cornerRadius="10dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="borrar"
-        android:text="Borrar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="sans-serif-condensed"
+        android:text="TRABAJO DE DESARROLLO BASADO EN PLATAFORMAS"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.613" />
-
-    <Button
-        android:id="@+id/bt_actualizar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="actualizar"
-        android:text="Actualizar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.739" />
-
-    <Button
-        android:id="@+id/CrearCollectionbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="CambiarActivity"
-        android:text="Crear Coleccion"
-        app:layout_constraintBottom_toTopOf="@+id/bt_crear"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.857" />
+        app:layout_constraintVertical_bias="0.26" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
