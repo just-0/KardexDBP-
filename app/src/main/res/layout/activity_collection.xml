@@ -64,7 +64,7 @@
             android:id="@+id/RegistrarCollectionButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/Azul_verde"
+            android:backgroundTint="@color/AmbarFireBase"
             android:onClick="FirebaseCrearCollection"
             android:text="Registrar"
             app:cornerRadius="10dp" />
@@ -74,7 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:backgroundTint="@color/Azul_verde"
+            android:backgroundTint="@color/NaranjaFireBase"
             android:onClick="CambiarActivity"
             android:text="Menu Principal"
             app:cornerRadius="10dp" />

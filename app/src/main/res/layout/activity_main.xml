@@ -7,81 +7,64 @@
     android:onClick="CambiarActivity"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="400dp"
+    <ImageView
+        android:id="@+id/logoimageView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_marginTop="197dp"
+        android:layout_marginBottom="198dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/CrearCollectionbutton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/Azul_verde"
-            android:onClick="CambiarActivity"
-            android:text="Crear Coleccion"
-            android:textSize="20sp"
-            app:cornerRadius="10dp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
-
-        <Button
-            android:id="@+id/bt_borrar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/Azul_verde"
-            android:onClick="borrar"
-            android:text="Borrar"
-            android:textSize="20sp"
-            app:cornerRadius="10dp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
-
-        <Button
-            android:id="@+id/bt_crear"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/Azul_verde"
-            android:onClick="Firebase_crear"
-            android:text="Crear"
-            android:textSize="20sp"
-            app:cornerRadius="10dp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
-
-        <Button
-            android:id="@+id/bt_actualizar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/Azul_verde"
-            android:onClick="actualizar"
-            android:text="Actualizar"
-            android:textSize="20sp"
-            app:cornerRadius="10dp" />
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logofirebase" />
 
     <TextView
-        android:id="@+id/Title_text"
+        android:id="@+id/DetextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed"
-        android:text="TRABAJO DE DESARROLLO BASADO EN PLATAFORMAS"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:layout_marginStart="195dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="196dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/abel"
+        android:text="De:"
+        app:layout_constraintBottom_toTopOf="@+id/WaltertextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoimageView" />
+
+    <TextView
+        android:id="@+id/WaltertextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="1dp"
+        android:fontFamily="@font/abel"
+        android:text="Walter Stephano Mejia Morales"
+        android:textColor="@color/AmbarFireBase"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.26" />
+        app:layout_constraintVertical_bias="0.866" />
 
+    <TextView
+        android:id="@+id/JustotextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="118dp"
+        android:fontFamily="@font/abel"
+        android:text="Justo Alfredo Perez Choque"
+        android:textColor="@color/AmbarFireBase"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.899" />
 </androidx.constraintlayout.widget.ConstraintLayout>

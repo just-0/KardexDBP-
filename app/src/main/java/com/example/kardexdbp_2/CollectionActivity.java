@@ -39,7 +39,7 @@ public class CollectionActivity extends AppCompatActivity {
 
     public void CambiarActivity(View view){
         //Cambio de Activity
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(this, InicioActivity.class);
         startActivity(i);
     }
     public void FirebaseCrearCollection(View view)

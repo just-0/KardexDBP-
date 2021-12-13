@@ -8,5 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="Azul_verde">#00605A</color>
+    <color name="AmarrilloFireBase">#FFCA28</color>
+    <color name="AmbarFireBase">#FFA000</color>
+    <color name="NaranjaFireBase">#F57C00</color>
+    <color name="GrisFireBase">#ECEFF1</color>
+
 
 </resources>
