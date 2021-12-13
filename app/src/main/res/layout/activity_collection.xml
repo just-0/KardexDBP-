@@ -37,19 +37,19 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/NameText"
+            android:id="@+id/DetalleText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Producto"
+            android:hint="Detalle"
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/ExistenciasText"
+            android:id="@+id/EntradaText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Existencias"
+            android:hint="Entrada"
             android:inputType="number" />
 
         <EditText
@@ -58,6 +58,14 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Precio"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/SalidaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Salida"
             android:inputType="number" />
 
         <Button

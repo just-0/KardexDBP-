@@ -104,7 +104,5 @@ public class InicioActivity extends AppCompatActivity {
         //Agarra El id del documento
         DocumentReference washingtonRef = db.collection("cities").document("LA");
         washingtonRef.update("country", "XDXDXDXDXD");//Actualiza un dato, en este caso le pone XDXDXDXD
-
-
     }
 }

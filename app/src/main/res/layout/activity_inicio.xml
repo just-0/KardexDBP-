@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/AmbarFireBase"
             android:onClick="CambiarCollectionActivity"
-            android:text="Crear Coleccion"
+            android:text="Crear"
             android:textSize="20sp"
             app:cornerRadius="10dp" />
 

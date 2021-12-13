@@ -7,8 +7,8 @@
     tools:context=".ActualizarActivity">
 
     <LinearLayout
-        android:layout_width="374dp"
-        android:layout_height="222dp"
+        android:layout_width="381dp"
+        android:layout_height="280dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="262dp"
         android:layout_marginEnd="1dp"
@@ -20,14 +20,6 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/DiaActualizarText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Dia"
-            android:inputType="textPersonName" />
-
-        <EditText
             android:id="@+id/MesActualizarText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,10 +27,26 @@
             android:hint="Mes"
             android:inputType="textPersonName" />
 
+        <EditText
+            android:id="@+id/DiaActualizarText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Dia"
+            android:inputType="textPersonName" />
+
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/ValorActualizarText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Valor a Actualizar"
+            android:inputType="textPersonName" />
 
         <Space
             android:layout_width="match_parent"
@@ -48,6 +56,7 @@
             android:id="@+id/ActualizarActivitybutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="actualizar"
             android:text="ACTUALIZAR"
             app:cornerRadius="10dp" />
 
