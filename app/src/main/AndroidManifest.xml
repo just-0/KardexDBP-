@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KardexDBP_2">
         <activity
+            android:name=".ActualizarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BorrarActivity"
+            android:exported="false" />
+        <activity
             android:name=".BuscarActivity"
             android:exported="false" />
         <activity

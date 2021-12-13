@@ -7,28 +7,18 @@
     tools:context=".BuscarActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="408dp"
-        android:layout_height="189dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginBottom="544dp"
+        android:id="@+id/linearLayout4"
+        android:layout_width="388dp"
+        android:layout_height="179dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="154dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <EditText
-            android:id="@+id/MesText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Ingrese el Mes"
-            android:inputType="textPersonName" />
+        app:layout_constraintTop_toTopOf="parent">
 
         <EditText
             android:id="@+id/DiaText"
@@ -38,11 +28,20 @@
             android:hint="Ingrese el Dia"
             android:inputType="textPersonName" />
 
+        <EditText
+            android:id="@+id/MesText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ingrese el Mes"
+            android:inputType="textPersonName" />
+
         <Button
             android:id="@+id/Buscarbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/AmarrilloFireBase"
+            android:onClick="Buscar_"
             android:text="BUSCAR"
             app:cornerRadius="10dp" />
 
@@ -57,17 +56,18 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="78dp"
+        android:id="@+id/linearLayout3"
+        android:layout_width="386dp"
+        android:layout_height="82dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="456dp"
+        android:layout_marginBottom="313dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
         <TextView
             android:id="@+id/DetalletextView"

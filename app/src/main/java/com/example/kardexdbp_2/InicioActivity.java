@@ -47,6 +47,16 @@ public class InicioActivity extends AppCompatActivity {
         Intent i = new Intent(this, BuscarActivity.class);
         startActivity(i);
     }
+    public void CambiarBorrarActivity(View view){
+        //Cambio de Activity
+        Intent i = new Intent(this, BorrarActivity.class);
+        startActivity(i);
+    }
+    public void CambiarActualizarActivity(View view){
+        //Cambio de Activity
+        Intent i = new Intent(this, ActualizarActivity.class);
+        startActivity(i);
+    }
 
 
 
