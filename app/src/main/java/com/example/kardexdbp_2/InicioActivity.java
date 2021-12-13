@@ -37,9 +37,14 @@ public class InicioActivity extends AppCompatActivity {
 
     //Metodo de Boton Agregar Collection
 
-    public void CambiarActivity(View view){
+    public void CambiarCollectionActivity(View view){
         //Cambio de Activity
         Intent i = new Intent(this, CollectionActivity.class);
+        startActivity(i);
+    }
+    public void CambiarBuscarActivity(View view){
+        //Cambio de Activity
+        Intent i = new Intent(this, BuscarActivity.class);
         startActivity(i);
     }
 

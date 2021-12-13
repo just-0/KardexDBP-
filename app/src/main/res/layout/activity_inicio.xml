@@ -21,8 +21,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/AmbarFireBase"
-            android:onClick="CambiarActivity"
+            android:onClick="CambiarCollectionActivity"
             android:text="Crear Coleccion"
+            android:textSize="20sp"
+            app:cornerRadius="10dp" />
+
+        <Button
+            android:id="@+id/BuscarIniciobutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/AmbarFireBase"
+            android:onClick="CambiarBuscarActivity"
+            android:text="BUSCAR"
             android:textSize="20sp"
             app:cornerRadius="10dp" />
 
@@ -37,20 +47,6 @@
             android:backgroundTint="@color/AmbarFireBase"
             android:onClick="borrar"
             android:text="Borrar"
-            android:textSize="20sp"
-            app:cornerRadius="10dp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
-
-        <Button
-            android:id="@+id/bt_crear"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/AmbarFireBase"
-            android:onClick="Firebase_crear"
-            android:text="Crear"
             android:textSize="20sp"
             app:cornerRadius="10dp" />
 

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BuscarActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="408dp"
+        android:layout_height="189dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="544dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:id="@+id/MesText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ingrese el Mes"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/DiaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ingrese el Dia"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/Buscarbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/AmarrilloFireBase"
+            android:text="BUSCAR"
+            app:cornerRadius="10dp" />
+
+        <Button
+            android:id="@+id/Menu1Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/AmbarFireBase"
+            android:onClick="CambiarActivity"
+            android:text="MENU PRINCIPAL"
+            app:cornerRadius="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="456dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/DetalletextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detalle" />
+
+        <TextView
+            android:id="@+id/EntradatextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Entrada" />
+
+        <TextView
+            android:id="@+id/SalidatextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salida" />
+
+        <TextView
+            android:id="@+id/PreciotextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Precio" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
