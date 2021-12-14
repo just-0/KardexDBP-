@@ -58,51 +58,13 @@ public class InicioActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-
-
-
-    //Codigo para crear una coleccion junto a una biblioteca.
-    public void Firebase_crear(View view)
-    {
-        // Para crear una biblioteca
-        Map<String, Object> city = new HashMap<>();
-        city.put("name", "Los Angeles");
-        city.put("state", "CA");
-        city.put("country", "USA");
-        city.put("A", 1);
-        //Se crea la coleccion ("cities") y despues una biblioteca ("LA")
-        //Quedaria asi Firebase\cities\LA
-        db.collection("cities").document("LA")
-                .set(city)      //Se coloca los datos de la biblioteca
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Log.d(TAG, "DocumentSnapshot successfully written!");
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "Error writing document", e);
-                    }
-                });
+    public void CambiarVerTablaActivity(View view){
+        //Cambio de Activity
+        Intent i = new Intent(this, ActivityVerTabla.class);
+        startActivity(i);
     }
 
 
-    public void borrar(View view)
-    {
-        //Agarra El id del documento
-        DocumentReference washingtonRef = db.collection("cities").document("LA");
-        washingtonRef.update("country", FieldValue.delete());//Actualiza un dato, en este caso lo borra
 
 
-    }
-
-
-    public void actualizar(View view)
-    {
-        //Agarra El id del documento
-        DocumentReference washingtonRef = db.collection("cities").document("LA");
-        washingtonRef.update("country", "XDXDXDXDXD");//Actualiza un dato, en este caso le pone XDXDXDXD
-    }
 }

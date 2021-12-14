@@ -8,8 +8,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="364dp"
-        android:layout_height="215dp"
+        android:layout_width="291dp"
+        android:layout_height="351dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,6 +25,10 @@
             android:text="Crear"
             android:textSize="20sp"
             app:cornerRadius="10dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <Button
             android:id="@+id/BuscarIniciobutton"
@@ -63,22 +67,37 @@
             android:text="Actualizar"
             android:textSize="20sp"
             app:cornerRadius="10dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/ver_tabla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/AmarrilloFireBase"
+            android:onClick="CambiarVerTablaActivity"
+            android:text="Ver tabla"
+            android:textSize="20sp"
+            app:cornerRadius="10dp" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/TitletextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="377dp"
+        android:layout_height="30dp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="115dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="35dp"
-        android:layout_marginBottom="114dp"
         android:fontFamily="@font/abel"
         android:text="Trabajo de Desarrollo Basado en Plataformas"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

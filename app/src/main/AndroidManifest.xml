@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KardexDBP_2">
         <activity
+            android:screenOrientation="landscape"
+            android:name=".ActivityVerTabla"
+            android:exported="false" />
+        <activity
             android:name=".ActualizarActivity"
             android:exported="false" />
         <activity
