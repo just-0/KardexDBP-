@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/AmbarFireBase"
 
-        android:onClick="save"
+        android:onClick="CambiarActivity"
         android:text="Menu principal"
         android:textSize="20sp"
         app:cornerRadius="10dp" />
