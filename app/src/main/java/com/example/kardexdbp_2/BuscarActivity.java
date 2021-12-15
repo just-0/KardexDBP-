@@ -63,8 +63,7 @@ public class BuscarActivity extends AppCompatActivity {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
 
-                        int [] numeros ;
-                        numeros = new int[2];
+
 
 
                         tv_Detalle.setText(""+document.get("Detalle"));
