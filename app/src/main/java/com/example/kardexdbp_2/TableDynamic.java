@@ -1,13 +1,11 @@
 package com.example.kardexdbp_2;
 
 import android.content.Context;
-import android.util.Size;
 import android.view.Gravity;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import java.util.ArrayList;
-
 
 public class TableDynamic {
     private TableLayout tableLayout;
@@ -22,8 +20,6 @@ public class TableDynamic {
     int firtColor;
     int secondColor;
     int textColor;
-
-
     public TableDynamic(TableLayout tableLayout, Context context) {
         this.tableLayout=tableLayout;
         this.context=context;

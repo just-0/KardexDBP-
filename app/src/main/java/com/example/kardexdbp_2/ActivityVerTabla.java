@@ -29,7 +29,7 @@ public class ActivityVerTabla extends AppCompatActivity {
     public String[][][]añadir = new String[12][31][4];
     public String[]meses = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
     //public String[][]meses = {{"Enero"}, {"Febrero"}, {"Marzo"}, {"Abril"}, {"Mayo"}, {"Junio"}, {"Julio"}, {"Agosto"}, {"Septiembre"}, {"Octubre"}, {"Noviembre"}, {"Diciembre"}};
-
+    private TableDynamic tableDynamic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,69 +39,26 @@ public class ActivityVerTabla extends AppCompatActivity {
         tableLayout = (TableLayout)  findViewById(R.id.table);
 
 
-        TableDynamic tableDynamic = new TableDynamic(tableLayout, getApplicationContext());
-
-
-
-        for (int i = 0; i < meses.length; i++)
-        {
-            for (int j = 1; j < 32;j++)
-            {
-
-                DocumentReference docRef = db.collection(meses[i]).document(String.valueOf(j-1));
-                int finalI = i;
-                int finalJ = j;
-                docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-
-                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                        DocumentSnapshot document = task.getResult();
-                        if (document.exists()) {
-                            añadir[finalI][finalJ -1][0] = ""+document.get("Detalle");
-                            añadir[finalI][finalJ -1][1] = ""+document.get("Entrada");
-                            añadir[finalI][finalJ -1][2] = ""+document.get("Salida");
-                            añadir[finalI][finalJ -1][3] = ""+document.get("Precio");
-
-                            Log.d("Succefully->", "DocumentSnapshot data: " + document.get("Detalle"));
-
-                        }
-                    }
-                });
-            }
-        }
-
-
+        tableDynamic = new TableDynamic(tableLayout, getApplicationContext());
 
 
         tableDynamic.addHeader(header);
         tableDynamic.addData(getClients());
 
-
-
-
-
-
     }
-    private ArrayList<String[]>getClients()
-    {
 
+
+    private ArrayList<String[]> getClients()
+    {
         for (int i = 0; i < meses.length; i++)
         {
-            for (int j = 1; j < 32;j++)
-            {
-                rows.add(new String[]{meses[i], "a",añadir[i][j -1][0] ,añadir[i][j -1][1],añadir[i][j -1][2],añadir[i][j -1][3]  } );
-
-            }
+            rows.add(new String[]{meses[i], "Pedro", "Lopez"});
         }
 
-
-
-
-
-
-        rows.add(new String[]{"list.get(i)", "a"});
-
+        rows.add(new String[]{"4", "Fiorella", "Canto"});
         return rows;
     }
+    //        rows.add(new String[]{"list.get(i)", "a"});
     public void CambiarActivity(View view){
         //Cambio de Activity
         Intent i = new Intent(this, InicioActivity.class);

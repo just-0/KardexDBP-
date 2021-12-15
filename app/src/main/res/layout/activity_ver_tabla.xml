@@ -14,10 +14,17 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/AmbarFireBase"
 
-        android:onClick="CambiarActivity"
+        android:onClick="save"
         android:text="Menu principal"
         android:textSize="20sp"
         app:cornerRadius="10dp" />
+
+    <Button
+        android:id="@+id/Colocar_Datos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="save"
+        android:text="Colocar Datos" />
 
     <ScrollView
         android:layout_width="match_parent"
