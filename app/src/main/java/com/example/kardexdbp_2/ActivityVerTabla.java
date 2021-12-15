@@ -26,8 +26,9 @@ public class ActivityVerTabla extends AppCompatActivity {
 
     private ArrayList<String[]> rows = new ArrayList<>();
     public FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-
+    public String[][][]añadir = new String[12][31][4];
+    public String[]meses = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+    //public String[][]meses = {{"Enero"}, {"Febrero"}, {"Marzo"}, {"Abril"}, {"Mayo"}, {"Junio"}, {"Julio"}, {"Agosto"}, {"Septiembre"}, {"Octubre"}, {"Noviembre"}, {"Diciembre"}};
 
 
     @Override
@@ -40,6 +41,37 @@ public class ActivityVerTabla extends AppCompatActivity {
 
         TableDynamic tableDynamic = new TableDynamic(tableLayout, getApplicationContext());
 
+
+
+        for (int i = 0; i < meses.length; i++)
+        {
+            for (int j = 1; j < 32;j++)
+            {
+
+                DocumentReference docRef = db.collection(meses[i]).document(String.valueOf(j-1));
+                int finalI = i;
+                int finalJ = j;
+                docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        DocumentSnapshot document = task.getResult();
+                        if (document.exists()) {
+                            añadir[finalI][finalJ -1][0] = ""+document.get("Detalle");
+                            añadir[finalI][finalJ -1][1] = ""+document.get("Entrada");
+                            añadir[finalI][finalJ -1][2] = ""+document.get("Salida");
+                            añadir[finalI][finalJ -1][3] = ""+document.get("Precio");
+
+                            Log.d("Succefully->", "DocumentSnapshot data: " + document.get("Detalle"));
+
+                        }
+                    }
+                });
+            }
+        }
+
+
+
+
         tableDynamic.addHeader(header);
         tableDynamic.addData(getClients());
 
@@ -51,54 +83,22 @@ public class ActivityVerTabla extends AppCompatActivity {
     }
     private ArrayList<String[]>getClients()
     {
-        List<String> list = new ArrayList<String>(){
-            {
-                add("Enero");
-                add("Febrero");
-                add("Marzo");
-                add("Abril");
-                add("Mayo");
-                add("Junio");
-                add("Julio");
-                add("Agosto");
-                add("Septiembre");
-                add("Octubre");
-                add("Noviembre");
-                add("Diciembre");
 
-            }
-        };
-        List<String> añadir = new ArrayList<String>();
-
-
-        for (int i = 0;i <3; i++)
+        for (int i = 0; i < meses.length; i++)
         {
-            for (int j = 0; j < 2; j++)
+            for (int j = 1; j < 32;j++)
             {
-                DocumentReference docRef = db.collection(list.get(i)).document(String.valueOf(j));
-                int finalI = i;
-                docRef.get().addOnCompleteListener(
-                        new OnCompleteListener<DocumentSnapshot>() {
+                rows.add(new String[]{meses[i], "a",añadir[i][j -1][0] ,añadir[i][j -1][1],añadir[i][j -1][2],añadir[i][j -1][3]  } );
 
-                    public void onComplete(@NonNull Task<DocumentSnapshot> task)
-                    {
-                        Task<DocumentSnapshot> as;
-
-                        DocumentSnapshot document = task.getResult();
-                        if (document.exists()) {
-
-                            rows.add(new String[]{"uiwu", "xdxdxd"});
-
-                            Log.d("Succefully->", "DocumentSnapshot data: " + document.get("Detalle"));
-                        } else {
-                            Log.d("Error dato->", "No such document");
-                        }
-
-                    }
-                });
             }
         }
 
+
+
+
+
+
+        rows.add(new String[]{"list.get(i)", "a"});
 
         return rows;
     }
