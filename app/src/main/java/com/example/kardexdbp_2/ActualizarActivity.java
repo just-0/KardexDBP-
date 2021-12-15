@@ -19,6 +19,9 @@ public class ActualizarActivity extends AppCompatActivity {
     private EditText et1, et2, et3;
     private TextView tv1;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
