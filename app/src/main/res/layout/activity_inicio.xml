@@ -8,18 +8,16 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="364dp"
-        android:layout_height="215dp"
+        android:layout_width="291dp"
+        android:layout_height="351dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.689">
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/CrearCollectionbutton"
+            android:id="@+id/MenuBottom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/AmbarFireBase"
@@ -27,6 +25,10 @@
             android:text="Crear"
             android:textSize="20sp"
             app:cornerRadius="10dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <Button
             android:id="@+id/BuscarIniciobutton"
@@ -65,37 +67,51 @@
             android:text="Actualizar"
             android:textSize="20sp"
             app:cornerRadius="10dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/ver_tabla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/AmarrilloFireBase"
+            android:onClick="CambiarVerTablaActivity"
+            android:text="Ver tabla"
+            android:textSize="20sp"
+            app:cornerRadius="10dp" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/TitletextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="115dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="114dp"
+        android:layout_width="377dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="35dp"
         android:fontFamily="@font/abel"
         android:text="Trabajo de Desarrollo Basado en Plataformas"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="41dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="106dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="205dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:id="@+id/imageView2"
+        android:layout_width="117dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/TitletextView"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:srcCompat="@mipmap/logo1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
